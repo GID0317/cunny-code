@@ -1164,6 +1164,7 @@
           tutorialphase4 : new Audio(getPaths() + 'resources/audio/arona/arona_tutorialphase4.mp3'),
           tutorialphase5 : new Audio(getPaths() + 'resources/audio/arona/arona_tutorialphase5.mp3'),
           tutorialphase6 : new Audio(getPaths() + 'resources/audio/arona/arona_tutorialphase6.mp3'),
+          passworddetailhelp : new Audio(getPaths() + 'resources/audio/arona/arona_passworddetailhelp.mp3'),
           itakeyesonly : new Audio(getPaths() + 'resources/audio/arona/arona_itakeyesonly.mp3'),
           itsalreadyshownsilly : new Audio(getPaths() + 'resources/audio/arona/arona_itsalreadyshownsilly.mp3'),
           howmyshoes : new Audio(getPaths() + 'resources/audio/arona/arona_howmyshoes.mp3'),
@@ -1354,6 +1355,7 @@
           // password help
           if (step == 'password') {
             Arona.say(Arona.speech.help.password);
+
           }
           
           // standard tutorial

@@ -1355,7 +1355,7 @@
           // password help
           if (step == 'password') {
             Arona.say(Arona.speech.help.password);
-
+            Arona.speak('passworddetailhelp');
           }
           
           // standard tutorial

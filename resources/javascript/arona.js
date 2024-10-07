@@ -823,6 +823,7 @@
         
         // Arona returns if you say sorry after making her mad
         else if (Arona.anger >= 5 && (/(?:I'm |)sorry/i.test(value) && !/not sorry/.test(value))) {
+          Arona.speak('imforgiveyou');
           Arona.comeBack();
         } 
         

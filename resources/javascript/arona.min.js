@@ -834,6 +834,7 @@
         
         else if (/(?:goodbye|good-bye)(?:, | )arona/i.test(value)) {
           Arona.say(Arona.speech.special.goodbye);
+          Arona.speak('iwanttospendmoretime');
         } 
         
         else if (/good(?: |)night(?:, | )arona|arona(?:, | )good(?: |)night/i.test(value)) {
@@ -914,7 +915,11 @@
         // responses to mean comments
         else if (/I hate (?:you |you, |)arona/i.test(value)) {
           Arona.say(Arona.speech.special.hate);
-          if (++Arona.anger == 5) Arona.quit();
+          Arona.speak('youdidntreallmeanthat');
+          if (++Arona.anger == 5){
+            Arona.speak('angryquit');
+            Arona.quit();
+          }
         } 
         
         else if (/arona (?:is |)(?:dumb|stupid)|(?:you're|you are) (?:dumb|stupid)(?:, | )arona/i.test(value)) {
@@ -1179,6 +1184,8 @@
           donttouchthatchest : new Audio(getPaths() + 'resources/audio/arona/arona_donttouchthatchest.mp3'),
           isthereanyonface : new Audio(getPaths() + 'resources/audio/arona/arona_isthereayonface.mp3'),
           sensei : new Audio(getPaths() + 'resources/audio/arona/sensei.ogg'),
+          iwanttospendmoretime : new Audio(getPaths() + 'resources/audio/arona/arona_iwanttospendmoretime.mp3'),
+          youdidntreallmeanthat : new Audio(getPaths() + 'resources/audio/arona/arona_youdidntreallmeanthat.mp3'),
           thatsticle : new Audio(getPaths() + 'resources/audio/arona/arona_thatstitcles.mp3'),
           thatsmyskirt : new Audio(getPaths() + 'resources/audio/arona/arona_thatsmyskirt.mp3'),
           didyouneedhelp : new Audio(getPaths() + 'resources/audio/arona/arona_didyouneedhelp.mp3')
